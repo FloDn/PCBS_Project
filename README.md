@@ -14,7 +14,9 @@ Created on Tue Oct 22 16:27:33 2019
 """
 
 # importing libraries 
+On importe les packages nécessaires : Tkinter pour l'interface, Workbook dez xlwt pour l'output Excel, os pour utiliser les fonctions dépendantes du système d'exploitation (windows), Pathlib pour aller chercher les fichiers. 
 
+```python
 import tkinter as tk
 from xlwt import Workbook 
 import glob
@@ -22,6 +24,7 @@ from os import startfile
 import sys, os
 from pathlib import Path
 import tkinter.tix as tktix
+```
 
 class video(object) :
     
