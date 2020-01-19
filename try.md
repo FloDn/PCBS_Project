@@ -8,3 +8,6 @@ import sys, os
 from pathlib import Path
 import tkinter.tix as tktix
 '''
+
+``file.choose``
+*puce 
