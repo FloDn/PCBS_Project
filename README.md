@@ -13,7 +13,7 @@ Mon programme consiste donc en une plateforme de présentation successive de sé
 * Réponse via les boutons 
 * Frame de l'interface 
 
-Nb: pour faire tourner le code, il faut utiliser le fichier program_emoRater dans le dossier Main_of_Project, afin qu'il soit unifié & hébergé dans le même dossier que les stimuli.
+Nb: pour faire tourner le code, il faut utiliser le fichier program_emoRater.py dans le dossier Main_of_Project, afin qu'il soit unifié & hébergé dans le même dossier que les stimuli.
 
 # importing libraries 
 On importe les packages nécessaires : Tkinter pour l'interface, Workbook de xlwt pour l'output Excel, Os pour utiliser les fonctions dépendantes du système d'exploitation (windows), Pathlib pour aller chercher les fichiers. 
