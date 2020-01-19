@@ -13,6 +13,8 @@ Mon programme consiste donc en une plateforme de présentation successive de sé
 * Réponse via les boutons 
 * Frame de l'interface 
 
+Nb: pour faire tourner le code, il faut utiliser le fichier program_emoRater dans le dossier Main_of_Project, afin qu'il soit unifié & hébergé dans le même dossier que les stimuli.
+
 # importing libraries 
 On importe les packages nécessaires : Tkinter pour l'interface, Workbook de xlwt pour l'output Excel, Os pour utiliser les fonctions dépendantes du système d'exploitation (windows), Pathlib pour aller chercher les fichiers. 
 
@@ -196,9 +198,10 @@ fenetre.mainloop()
 ```
 
 ## Quelques notes sur le programme 
-La totalité du programme (je l'ai appelé "EmoRater") est dans le fichier main_EmoRater.py. Les vidéos utilisées sont dans le fichier Vidéos & uploadées séparémment. La base de données que nous utilisons dans l'expérience d'origine n'est pas disponible en libre usage, c'est pourquoi j'ai mis à disposition des petites vidéos libre-accès trouvées sur internet, qui présentent principalement des animaux ou des séquences dénuées d'intérêt particulier (cependant à titre personnel, j'en trouve certaines plutôt amusantes).
+La totalité du programme (je l'ai appelé "EmoRater") est dans le fichier program_EmoRater.py, dans le dossier Main_of_project. Les vidéos utilisées sont dans le fichier Main_of_project & uploadées séparémment. La base de données que nous utilisons dans l'expérience d'origine n'est pas disponible en libre usage, c'est pourquoi j'ai mis à disposition des petites vidéos libre-accès trouvées sur internet, qui présentent principalement des animaux ou des séquences dénuées d'intérêt particulier (cependant à titre personnel, j'en trouve certaines plutôt amusantes).
 
 J'ajoute que je suis bien consciente que ce programme n'est pas du grand art de programmeur. Un milliard d'éléments auraient pu être améliorés, en termes de display, d'ergonomie (également au niveau du post sur github), de fonctionnalités, etc. Ce programme ne fourmille pas non plus de pertinence en termes d'analyse des fonctions cognitives, toutefois il ne faut pas oublier la dimension pratique des expériences (surtout en psychologie) et le pré-test des stimuli est une étape non-négligeable si on veut monter en validité expérimentale. 
+La programmation n'a jamais été une seconde nature pour moi & la seule expérience dont je disposais avant ce semestre fut une vague UE d'introduction aux statistiques via R durant mon Erasmus de L3. 
 
 Etant de background psychologie, je me suis surtout intéressée au langage R durant ce semestre, python n'étant pas ma priorité. Je voulais d'abord tenter une Balloon Analogue Risk Task (Lejuez & al., 2002) mais il va de soi que ce n'était pas de mon niveau. 
 Ce que j'aurais pu faire, cependant, c'est extraire l'output des notations sur l'Excel et coder une micro-analyse des indices de tendance centrale et de dispersion sur R. Cela aurait été intéressant et aurait complété le programme, mais je n'ai pas eu le temps. 
