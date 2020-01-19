@@ -7,6 +7,11 @@ Mon programme consiste donc en une plateforme de présentation successive de sé
 
 ## Structure du programme 
 * Importation des packages 
+* Définition des objets 
+* Output Excel
+* Echelles de notations 
+* Réponse via les boutons 
+* Frame de l'interface 
 
 # importing libraries 
 On importe les packages nécessaires : Tkinter pour l'interface, Workbook dez xlwt pour l'output Excel, os pour utiliser les fonctions dépendantes du système d'exploitation (windows), Pathlib pour aller chercher les fichiers. 
@@ -22,7 +27,7 @@ import tkinter.tix as tktix
 ```
 
 ## Définition des objets 
-Le programme peut être utilisé avec des vidéos mais aussi des images au format jpg. Elles ne figurent pas dans ma database mais peuvent toutefois être ajoutées car il y a du code disponible pour.
+Le programme peut être utilisé avec des vidéos mais aussi des images au format jpg. Elles ne figurent pas dans ma database mais peuvent toutefois être ajoutées car il y a du code disponible pour. Les objets sont les vidéos (référencées en tant que Self)
 
 ```python
 class video(object) :
@@ -31,7 +36,6 @@ class video(object) :
         self.nom=name
     
     def jouer_video(self):
-        
         startfile(self.nom)
            
 class image(object) :
@@ -88,6 +92,7 @@ def myfunction(event):
 ```
 ### Putting all together 
 * Boutons
+
 On va installer les boutons et leur ajouter un design sur l'interface, et les lier au lancement des vidéos, de façon à ce que lorsqu'on appuie sur le bouton, la vidéo se lance. 
 ```python
 def boutons() :
@@ -106,7 +111,7 @@ def boutons() :
         valence_video[i].grid(padx=15,pady=15,ipady=15,ipadx=15,row=i,column=1)
 ```
 * Echelle d'intensité 
-``` 
+```python
         note_video.append(tk.Scale(objet_video[i],from_=0, to=20,orient='horizontal',background="azure",highlightbackground="azure",resolution=1,label="Note",font=("Constantia",12,'italic')))
         note_video[i].grid(padx=5,pady=5,row=i,column=2)
 ``` 
@@ -177,7 +182,7 @@ canvas.config(background="azure",highlightbackground="azure")
 boutons()
 ```
 Petit plus : on ajoute un Menu afin que le sujet puisse prévenir quand il a fini, ou encore recommencer si cela lui a tellement plu qu'il veut le refaire. 
-``` 
+``` python
 menubar = tk.Menu(fenetre)
 menu1 = tk.Menu(menubar, tearoff=0)
 menu1.add_command(label="Fini",command=sortie)
@@ -191,7 +196,7 @@ fenetre.mainloop()
 ```
 
 ## Quelques notes sur le programme 
-La totalité du Viewer est dans le fichier main.py. Les vidéos utilisées sont dans le fichier Vidéos & uploadées séparémment. La base de données que nous utilisons dans l'expérience d'origine n'est pas disponible en libre usage, c'est pourquoi j'ai mis à disposition des petites vidéos libre-accès trouvées sur internet, qui présentent principalement des animaux ou des séquences dénuées d'intérêt particulier (cependant à titre personnel, j'en trouve certaines plutôt amusantes).
+La totalité du programme (je l'ai appelé "EmoRater") est dans le fichier main_EmoRater.py. Les vidéos utilisées sont dans le fichier Vidéos & uploadées séparémment. La base de données que nous utilisons dans l'expérience d'origine n'est pas disponible en libre usage, c'est pourquoi j'ai mis à disposition des petites vidéos libre-accès trouvées sur internet, qui présentent principalement des animaux ou des séquences dénuées d'intérêt particulier (cependant à titre personnel, j'en trouve certaines plutôt amusantes).
 
 J'ajoute que je suis bien consciente que ce programme n'est pas du grand art de programmeur. Un milliard d'éléments auraient pu être améliorés, en termes de display, d'ergonomie (également au niveau du post sur github), de fonctionnalités, etc. Ce programme ne fourmille pas de pertinence en termes d'analyse des fonctions cognitives, toutefois il ne faut pas oublier la dimension pratique des expériences (surtout en psychologie) et le pré-test des stimuli est une étape non-négligeable si on veut monter en validité expérimentale. 
 
