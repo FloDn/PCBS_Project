@@ -91,7 +91,7 @@ def myfunction(event):
     canvas.configure(scrollregion=canvas.bbox("all"),width=700,height=500)
 ```
 ### Putting all together 
-* Boutons
+* *Boutons*
 
 On va installer les boutons et leur ajouter un design sur l'interface, et les lier au lancement des vidéos, de façon à ce que lorsqu'on appuie sur le bouton, la vidéo se lance. 
 ```python
@@ -105,12 +105,12 @@ def boutons() :
         bouton_video.append(tk.Button(objet_video[i],command=video(videos[i]).jouer_video,text="Vidéo "+str(i+1),bg='LightSkyBlue1',font=("Constantia",12,'bold')))
         bouton_video[i].grid(padx=5,pady=5,row=i,column=0)
 ```
-* Echelle de valence 
+* *Echelle de valence* 
 ```python
         valence_video.append(tk.Scale(objet_video[i],from_=0, to=1,orient='horizontal',resolution=1,label="Négatif             Positif",background="azure",highlightbackground="azure",font=("Constantia",10,'italic')))
         valence_video[i].grid(padx=15,pady=15,ipady=15,ipadx=15,row=i,column=1)
 ```
-* Echelle d'intensité 
+* *Echelle d'intensité* 
 ```python
         note_video.append(tk.Scale(objet_video[i],from_=0, to=20,orient='horizontal',background="azure",highlightbackground="azure",resolution=1,label="Note",font=("Constantia",12,'italic')))
         note_video[i].grid(padx=5,pady=5,row=i,column=2)
