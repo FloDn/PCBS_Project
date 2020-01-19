@@ -111,7 +111,8 @@ def boutons() :
         
         note_image.append(tk.Scale(objet_image[i],from_=0, to=10,orient='horizontal',background="azure",highlightbackground="azure",resolution=1,label="Note",font=("Constantia",12,'italic')))
         note_image[i].grid(padx=5,pady=5,row=i,column=3)
-    
+
+```python
 path = Path("Project").parent.absolute()
 path=str(path)
 
@@ -136,6 +137,7 @@ posx  = 100
 posy  = 100
 fenetre.wm_geometry("%dx%d+%d+%d" % (sizex, sizey, posx, posy))
 
+
 frame=tk.Frame(fenetre,relief='groove')
 frame.place(x=10,y=8)
 canvas=tk.Canvas(frame)
@@ -149,8 +151,9 @@ frame.bind("<Configure>",myfunction)
 newframe.config(background="azure",highlightbackground="azure")
 frame.config(background="azure",highlightbackground="azure")
 canvas.config(background="azure",highlightbackground="azure")
+```
 
-
+```javascript
 boutons()
 
 
@@ -163,7 +166,7 @@ fenetre.config(menu=menubar,background="azure")
 
 
 fenetre.mainloop()
-    
+```
 
 
 
