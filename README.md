@@ -1,10 +1,9 @@
-# PCBS Project
-# EmoRater : Une plateforme d'évaluation de stimuli émotionnels 
+# PCBS Project: une plateforme d'évaluation de stimuli émotionnels 
 
-   L'émotion est traditionnellement définie comme épisode de changements interdépendants et synchronisés d'une composante physiologique, cognitive et comportementale, en réponse à un événement signficatif pour l’organisme; selon la définition de Sander et R. Scherer, 2009. On peut caractérisée une émotion par sa valence (plutôt positive ou négative) et son intensité (amplitude des activations physiologiques, niveau de significativité pour le sujet). Afin d'évaluer la réponse émotionnelle en psychologie expérimentale, les sujets sont la plupart du temps confrontés à des stimuli visuels tels que des photographies (visages, paysages, animaux) ou des séquences filmiques. Par ailleurs, certaines composantes d'une réaction émotionnelle peut aussi être inclue comme facteur de variations sur une mesure comportementale. 
-L'activation émotionnelle est une donnée psychophysiologique soumise à une variabilité intra-individuelle très conséquente. Ainsi, utiliser des stimuli émotionnels requiert de confronter ses sujets à des photographies ou vidéos suffisamment stimulantes pour qu'une réaction émerge, tout en gardant l'idée que le matériel expérimental est soumis à l'avis un comité d'éthique. Les stimuli doivent donc faire l'objet d'un pré-test afin de vérifier qu'ils sont suffisamment efficients pour être utilisés dans l'expérience future. 
+   L'émotion est traditionnellement définie comme épisode de changements physiologiques, cognitifs et comportementaux, interdépendants et synchronisés, en réponse à un événement signficatif pour l’organisme; selon la définition de Sander et Scherer, 2009. On peut caractériser phénoménologiquement une émotion par sa valence (plutôt positive ou négative) et son intensité (amplitude des activations physiologiques, niveau de significativité pour le sujet). Afin d'évaluer la réponse émotionnelle en psychologie expérimentale, les sujets sont la plupart du temps confrontés à des stimuli visuels tels que des photographies (visages, paysages, animaux) ou des séquences filmiques. Par ailleurs, certaines composantes d'une réaction émotionnelle peuvent aussi être inclues comme facteur de variations sur une mesure comportementale. 
+L'activation émotionnelle est une donnée psychophysiologique soumise à une variabilité intra-individuelle très conséquente. Ainsi, utiliser des stimuli émotionnels requiert de confronter ses sujets à des photographies ou vidéos suffisamment stimulantes pour qu'une réaction émerge, tout en gardant en tête que le matériel expérimental est soumis à l'avis un comité d'éthique. Les stimuli doivent donc faire l'objet d'un pré-test afin de vérifier qu'ils sont suffisamment efficients pour être utilisés dans l'expérience future. 
 
-Mon programme consiste donc en une plateforme de présentation successive de séquences filmiques, dotées chacune d'une échelle de valence et d'intensité, directement manipulables par le sujet. Il peut décider du lancement de la vidéo, et peut bouger le curseur sur l'échelle le long de valeurs discrètes allant de 1 à 10. Initialement, mon programme était une proposition de support pour le pré-test de l'étude de mon laboratoire de stage (Cognition Humaine & artificielle, Université Paris 10). Cette étude s'intéresse notamment contact social non-verbal (contact oeil-oeil, prononciation régulière du prénom de la personne au cours du dialogue, toucher social) comme facteur de variation comportementale. Elle teste l'hypothèse selon laquelle l'augmentation d'un tel contact influence la cohérence entre une mesure auto-rapportée de la réaction émotionnelle et la réponse électrodermale. On appelle cette cohérence la précision intéroceptive, et se mesure par des tests sur des corrélations. 
+Mon programme consiste donc en une plateforme de présentation successive de séquences filmiques, dotées chacune d'une échelle de valence et d'intensité, directement manipulables par le sujet. Il peut décider du lancement de la vidéo, et peut bouger le curseur sur l'échelle le long de valeurs discrètes allant de 1 à 10. Initialement, mon programme était une proposition de support pour le pré-test de l'étude de mon laboratoire de stage (Cognition Humaine & artificielle, Université Paris 10). Cette étude s'intéresse au contact social non-verbal (contact oeil-oeil, toucher social) comme facteur de variation comportementale. Elle teste l'hypothèse selon laquelle l'augmentation d'un tel contact influence la cohérence entre une mesure auto-rapportée de la réaction émotionnelle et la réponse électrodermale. On appelle cette cohérence la précision intéroceptive, et se mesure par des tests sur des corrélations. 
 
 ## Structure du programme 
 * Importation des packages 
@@ -15,7 +14,7 @@ Mon programme consiste donc en une plateforme de présentation successive de sé
 * Frame de l'interface 
 
 # importing libraries 
-On importe les packages nécessaires : Tkinter pour l'interface, Workbook dez xlwt pour l'output Excel, os pour utiliser les fonctions dépendantes du système d'exploitation (windows), Pathlib pour aller chercher les fichiers. 
+On importe les packages nécessaires : Tkinter pour l'interface, Workbook de xlwt pour l'output Excel, Os pour utiliser les fonctions dépendantes du système d'exploitation (windows), Pathlib pour aller chercher les fichiers. 
 
 ```python
 import tkinter as tk
@@ -28,7 +27,7 @@ import tkinter.tix as tktix
 ```
 
 ## Définition des objets 
-Le programme peut être utilisé avec des vidéos mais aussi des images au format jpg. Elles ne figurent pas dans ma database mais peuvent toutefois être ajoutées car il y a du code disponible pour. Les objets sont les vidéos (référencées en tant que Self)
+Le programme peut être utilisé avec des vidéos (format mp4) mais aussi des images (format jpg). Les images ne figurent pas dans ma database mais peuvent toutefois être ajoutées car il y a du code disponible pour. Les objets sont les vidéos (référencées en tant que Self)
 
 ```python
 class video(object) :
@@ -50,7 +49,7 @@ class image(object) :
 ```
 
 ### Output 
-On définit la sortie grâce à la fonction Workbook. C'est-à-dire qu'on va recevoir un fichier Excel dans le dossier mère à la fin de la notation avec les chiffres & la valence correspondante. On utilise le path correspondant + ``/Excel.xls`` pour que le programme retrouve le fichier Excel. La plupart des intéractions entre les fichiers & le programme utilisent le path & les fonctions Os, **il faut donc bien tout mettre ensemble dans un dossier sinon plus rien ne va.** 
+On définit la sortie grâce à la fonction Workbook. C'est-à-dire qu'on va recevoir un fichier Excel dans le dossier mère à la fin de la notation avec les chiffres & la valence correspondante. On utilise le path local + ``/Excel.xls`` pour que le programme retrouve le fichier Excel. La plupart des intéractions entre les fichiers & le programme utilisent le path & les fonctions Os, **il faut donc bien tout mettre ensemble dans un dossier sinon plus rien ne va.** 
 ```python
 def sortie() :
     global note_image, note_video, valence_video, images, videos, path
@@ -74,7 +73,7 @@ def sortie() :
     fenetre.destroy()
 ``` 
 ### Définition de la valence et de l'intensité des stimuli
-On utilise une boucle for pour que chaque vidéo puisse faire l'objet d'une note.
+On utilise une ``forloop`` pour que chaque vidéo puisse faire l'objet d'une note.
 ```python
 def reset() :
     global note_image, note_video
@@ -132,7 +131,7 @@ Nb : Des lignes sont aussi implémentées pour les images:
         note_image[i].grid(padx=5,pady=5,row=i,column=3)
 ``` 
 ### Réponse
-Lier la notation réponse à chaque vidéos
+Lier la notation réponse à chaque vidéo.
 ```python
 path = Path("Project").parent.absolute()
 path=str(path)
@@ -171,7 +170,7 @@ mybar=tk.Scrollbar(frame,orient="vertical",command=canvas.yview)
 canvas.configure(yscrollcommand=myscrollbar.set)
 myscrollbar.pack(side="right",fill="y")
 ``` 
-On place dispose le matériel sur l'interface
+On dispose le matériel sur l'interface
 ```python
 canvas.pack(side="left")
 canvas.create_window((0,0),window=newframe,anchor='nw')
@@ -199,16 +198,19 @@ fenetre.mainloop()
 ## Quelques notes sur le programme 
 La totalité du programme (je l'ai appelé "EmoRater") est dans le fichier main_EmoRater.py. Les vidéos utilisées sont dans le fichier Vidéos & uploadées séparémment. La base de données que nous utilisons dans l'expérience d'origine n'est pas disponible en libre usage, c'est pourquoi j'ai mis à disposition des petites vidéos libre-accès trouvées sur internet, qui présentent principalement des animaux ou des séquences dénuées d'intérêt particulier (cependant à titre personnel, j'en trouve certaines plutôt amusantes).
 
-J'ajoute que je suis bien consciente que ce programme n'est pas du grand art de programmeur. Un milliard d'éléments auraient pu être améliorés, en termes de display, d'ergonomie (également au niveau du post sur github), de fonctionnalités, etc. Ce programme ne fourmille pas de pertinence en termes d'analyse des fonctions cognitives, toutefois il ne faut pas oublier la dimension pratique des expériences (surtout en psychologie) et le pré-test des stimuli est une étape non-négligeable si on veut monter en validité expérimentale. 
+J'ajoute que je suis bien consciente que ce programme n'est pas du grand art de programmeur. Un milliard d'éléments auraient pu être améliorés, en termes de display, d'ergonomie (également au niveau du post sur github), de fonctionnalités, etc. Ce programme ne fourmille pas non plus de pertinence en termes d'analyse des fonctions cognitives, toutefois il ne faut pas oublier la dimension pratique des expériences (surtout en psychologie) et le pré-test des stimuli est une étape non-négligeable si on veut monter en validité expérimentale. 
 
-Etant de background psychologie, je me suis surtout intéressée au langage R, python n'étant pas ma priorité. Je voulais d'abord tenté une Balloon Analogue Risk Task (Lejuez & al., 2002) mais il va de soi que j'ai réalisé que ce n'était pas de mon niveau. 
+Etant de background psychologie, je me suis surtout intéressée au langage R durant ce semestre, python n'étant pas ma priorité. Je voulais d'abord tenter une Balloon Analogue Risk Task (Lejuez & al., 2002) mais il va de soi que ce n'était pas de mon niveau. 
 Ce que j'aurais pu faire, cependant, c'est extraire l'output des notations sur l'Excel et coder une micro-analyse des indices de tendance centrale et de dispersion sur R. Cela aurait été intéressant et aurait complété le programme, mais je n'ai pas eu le temps. 
 
-Crucialement : Ce programme n'a pas été utilisé pour le pré-test, mon superviseur a préféré utiliser un bon vieu E-prime 3.0 (et on le comprend !) 
+Crucialement : Ce programme n'a pas été utilisé pour le pré-test, mon superviseur a préféré utiliser un bon vieux E-prime 3.0 (et on le comprend !) 
 
 ## Retour sur la pédagogie du cours PCBS
 L'intention est là, pour sûr. On a vraiment besoin d'apprendre le code et on en est tous conscients. Cependant, il y a un problème dans la disposition de l'enseignement. Il serait peut être bien d'essayer un vrai cours, c'est-à-dire, une intéraction entre le groupe et le professeur, la résolution d'exercices ensemble, un apprentissage pas à pas où tout le monde intéragit, et si c'est possible, un rendu de projet final adapté au niveau de chacun. Il est, selon moi, important de diviser la classe en groupes de niveau comme le cours Datacamp. 
 Etant débutante, j'ai plus appris en Datacamp qu'en PCBS, je pense que les projets établis pour PCBS reposent à 95% sur les connaissances préalables et la recherche en autonomie sur internet et à 5% sur les cours. Cependant, tout ce que je dis là ne met en aucun cas en cause les intervenants pour cet UE, qui ont su être toujours disponible pour aider et répondre aux questions. 
+
+## Référence  
+Sander, D., & Scherer, K. R. (2014). Traité de psychologie des émotions. Paris : Dunod.
 
 
 
