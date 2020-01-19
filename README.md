@@ -201,12 +201,13 @@ fenetre.mainloop()
 La totalité du programme (je l'ai appelé "EmoRater") est dans le fichier program_EmoRater.py, dans le dossier Main_of_project. Les vidéos utilisées sont dans le fichier Main_of_project & uploadées séparémment. La base de données que nous utilisons dans l'expérience d'origine n'est pas disponible en libre usage, c'est pourquoi j'ai mis à disposition des petites vidéos libre-accès trouvées sur internet, qui présentent principalement des animaux ou des séquences dénuées d'intérêt particulier (cependant à titre personnel, j'en trouve certaines plutôt amusantes).
 
 J'ajoute que je suis bien consciente que ce programme n'est pas du grand art de programmeur. Un milliard d'éléments auraient pu être améliorés, en termes de display, d'ergonomie (également au niveau du post sur github), de fonctionnalités, etc. Ce programme ne fourmille pas non plus de pertinence en termes d'analyse des fonctions cognitives, toutefois il ne faut pas oublier la dimension pratique des expériences (surtout en psychologie) et le pré-test des stimuli est une étape non-négligeable si on veut monter en validité expérimentale. 
+
 La programmation n'a jamais été une seconde nature pour moi & la seule expérience dont je disposais avant ce semestre fut une vague UE d'introduction aux statistiques via R durant mon Erasmus de L3. 
 
-Etant de background psychologie, je me suis surtout intéressée au langage R durant ce semestre, python n'étant pas ma priorité. Je voulais d'abord tenter une Balloon Analogue Risk Task (Lejuez & al., 2002) mais il va de soi que ce n'était pas de mon niveau. 
+Etant de background psychologie, je me suis surtout intéressée au langage R & ses potentialités d'analyse statistiques durant ce semestre, python n'étant pas ma priorité. Je voulais d'abord tenter une Balloon Analogue Risk Task (Lejuez & al., 2002) mais il va de soi que ce n'était pas de mon niveau. 
 Ce que j'aurais pu faire, cependant, c'est extraire l'output des notations sur l'Excel et coder une micro-analyse des indices de tendance centrale et de dispersion sur R; ainsi qu'un coefficient d'accord inter-notateur. Cela aurait été intéressant et aurait complété le programme, mais je n'ai pas eu le temps. 
 
-Crucialement : Ce programme n'a pas été utilisé pour le pré-test, mon superviseur a préféré utiliser un bon vieux E-prime 3.0 (et on le comprend !) 
+Crucialement : Ce programme n'a finalement pas été utilisé pour le pré-test de l'expérience de mon labo de stage, mon superviseur a préféré utiliser un bon vieux E-prime 3.0 (et on le comprend !) 
 
 ## Retour sur la pédagogie du cours PCBS
 L'intention est là, pour sûr. On a vraiment besoin d'apprendre le code et on en est tous conscients. Cependant, il y a un problème dans la disposition de l'enseignement. Il serait peut être bien d'essayer un vrai cours, c'est-à-dire, une intéraction entre le groupe et le professeur, la résolution d'exercices ensemble, un apprentissage pas à pas où tout le monde intéragit, et si c'est possible, un rendu de projet final adapté au niveau de chacun. Il est, selon moi, important de diviser la classe en groupes de niveau comme le cours Datacamp. 
