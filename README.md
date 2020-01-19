@@ -204,7 +204,7 @@ J'ajoute que je suis bien consciente que ce programme n'est pas du grand art de 
 La programmation n'a jamais été une seconde nature pour moi & la seule expérience dont je disposais avant ce semestre fut une vague UE d'introduction aux statistiques via R durant mon Erasmus de L3. 
 
 Etant de background psychologie, je me suis surtout intéressée au langage R durant ce semestre, python n'étant pas ma priorité. Je voulais d'abord tenter une Balloon Analogue Risk Task (Lejuez & al., 2002) mais il va de soi que ce n'était pas de mon niveau. 
-Ce que j'aurais pu faire, cependant, c'est extraire l'output des notations sur l'Excel et coder une micro-analyse des indices de tendance centrale et de dispersion sur R. Cela aurait été intéressant et aurait complété le programme, mais je n'ai pas eu le temps. 
+Ce que j'aurais pu faire, cependant, c'est extraire l'output des notations sur l'Excel et coder une micro-analyse des indices de tendance centrale et de dispersion sur R; ainsi qu'un coefficient d'accord inter-notateur. Cela aurait été intéressant et aurait complété le programme, mais je n'ai pas eu le temps. 
 
 Crucialement : Ce programme n'a pas été utilisé pour le pré-test, mon superviseur a préféré utiliser un bon vieux E-prime 3.0 (et on le comprend !) 
 
