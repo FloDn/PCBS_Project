@@ -5,7 +5,4 @@ L'activation émotionnelle est une donnée psychophysiologique soumise à une va
 
 Mon programme consiste donc en une plateforme de présentation successive de séquences filmiques, dotées chacune d'une échelle de valence et d'intensité, directement manipulables par le sujet. Il peut décider du lancement de la vidéo, et peut bouger le curseur sur l'échelle le long de valeurs discrètes allant de 1 à 10. Initialement, mon programme était une proposition de support pour le pré-test de l'étude de mon laboratoire de stage (Cognition Humaine & artificielle, Université Paris 10). Cette étude s'intéresse notamment contact social non-verbal (contact oeil-oeil, prononciation régulière du prénom de la personne au cours du dialogue, toucher social) comme facteur de variation comportementale. Elle teste l'hypothèse selon laquelle l'augmentation d'un tel contact influence la cohérence entre une mesure auto-rapportée de la réaction émotionnelle et la réponse électrodermale. On appelle cette cohérence la précision intéroceptive, et se mesure par des tests sur des corrélations. 
 
-'''
-import tkinter as tk
-from xlwt import Workbook 
-'''
+
